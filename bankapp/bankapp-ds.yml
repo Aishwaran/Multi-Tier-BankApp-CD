@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: aish2000/bankapp:v5
+        image: aish2000/bankapp:v6
         ports:
         - containerPort: 8080
         env:
