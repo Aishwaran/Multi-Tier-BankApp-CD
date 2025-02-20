@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: aish2000/gitops:v10
+        image: aish2000/gitops:latest
         ports:
         - containerPort: 8080
         env:
