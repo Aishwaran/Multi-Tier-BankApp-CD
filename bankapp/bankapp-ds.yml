@@ -4,20 +4,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankapp
+  name: myapp
 spec:
   replicas: 1
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      app: bankapp
+      app: myapp
   template:
     metadata:
       labels:
-        app: bankapp
+        app: myapp
     spec:
       containers:
-      - name: bankapp
+      - name: myapp
         image: aish2000/gitops:v5
         ports:
         - containerPort: 8080
@@ -33,11 +33,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-service
+  name: myapp-service
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: bankapp
+    app: myapp
