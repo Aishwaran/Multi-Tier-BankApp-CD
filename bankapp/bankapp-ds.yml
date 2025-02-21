@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: aish2000/gitops:v7
+        image: aish2000/gitops:v8
         ports:
         - containerPort: 8080
         env:
